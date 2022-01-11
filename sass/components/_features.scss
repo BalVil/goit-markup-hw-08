@@ -5,10 +5,9 @@
   }
 }
 .features-list {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin: -30px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -22,13 +21,12 @@
 //   }
 // }
 .features-list__item {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    // flex-basis: calc((100% - 30px) / 2);
-    width: calc((100% - 2 * 60px) / 2);
-    margin: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
   }
   @media screen and (min-width: 1200px) {
-    min-width: 270px;
+    // min-width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 
   &:not(:last-child) {

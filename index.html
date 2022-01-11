@@ -23,9 +23,17 @@
           <a href="" class="logo header__logo"
             >Web<span class="logo__text">Studio</span></a
           >
+          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-cross" href="./images/sprite.svg#close_cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu_burger"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" id="menu-container" data-menu>Контент</div>
 
           <!-- Navigation menu -->
-          <ul class="navbox">
+          <!-- <ul class="navbox">
             <li class="navbox__item">
               <a href="" class="navbox__link navbox__link--current primary-link"
                 >Студия</a
@@ -40,10 +48,10 @@
               <a href="" class="navbox__link primary-link">Контакты</a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
 
         <!-- Header links list-->
-        <ul class="authnav">
+        <!-- <ul class="authnav">
           <li class="authnav__item">
             <a
               href="mailto:info@devstudio.com"
@@ -71,7 +79,7 @@
               +38 096 111 11 11
             </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </header>
 
@@ -79,12 +87,16 @@
     <main>
       <!-- Hero -->
       <div class="hero-overlay">
-        <section class="section hero">
+        <section class="section hero-section">
           <h1 class="hero__title">
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button hero__button" data-modal-open>
+          <button
+            type="button"
+            class="button hero-section__button"
+            data-modal-open
+          >
             Заказать услугу
           </button>
         </section>
@@ -148,7 +160,7 @@
       </section>
 
       <!-- Activities section-->
-      <section class="section">
+      <section class="section activities-section">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="activities">
@@ -196,7 +208,7 @@
       </section>
 
       <!-- Team members section-->
-      <section class="section section--bg-color">
+      <section class="section team-section team-section--bg-color">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
@@ -373,7 +385,7 @@
       </section>
 
       <!-- Clients section -->
-      <section class="section">
+      <section class="section client-section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="client">
@@ -612,5 +624,6 @@
       })();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

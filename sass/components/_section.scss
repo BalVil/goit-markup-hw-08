@@ -1,9 +1,10 @@
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.section--bg-color {
-  background-color: getColorLight("light-bg");
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section__title {
   margin-bottom: 30px;
