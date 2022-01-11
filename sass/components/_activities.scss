@@ -1,0 +1,25 @@
+// .activities {
+//   display: flex;
+
+//   &__item:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+// .activities__thumb {
+//   position: relative;
+// }
+// .activities__text-wrapper {
+//   position: absolute;
+//   bottom: 0;
+//   @include centeredFlex();
+//   width: 100%;
+//   height: 70px;
+//   background-color: getColorDark("avgDark-opacity80");
+// }
+// .activities__text {
+//   font-weight: bold;
+//   @include regularText();
+//   text-align: center;
+//   text-transform: uppercase;
+//   color: getColorLight("light");
+// }

@@ -1,0 +1,48 @@
+// Animation
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Colors map
+// light colors
+$colors-light: (
+  "light": #ffffff,
+  "light-bg": #f5f4fa,
+  "light-border": #ececec,
+  "hero-bg": #c4c4c4,
+  "icon": #afb1b8,
+  "light-opacity10": rgba(255, 255, 255, 0.1),
+  "light-opacity30": rgba(255, 255, 255, 0.3),
+  "light-opacity60": rgba(255, 255, 255, 0.6),
+);
+@function getColorLight($key) {
+  @return map-get($colors-light, $key);
+}
+// dark colors
+$colors-dark: (
+  "theme": #757575,
+  "secondary": #212121,
+  "footer-bg": #2f303a,
+  "maxDark-opacity6": rgba(0, 0, 0, 0.06),
+  "maxDark-opacity8": rgba(0, 0, 0, 0.08),
+  "maxDark-opacity10": rgba(0, 0, 0, 0.1),
+  "maxDark-opacity12": rgba(0, 0, 0, 0.12),
+  "maxDark-opacity14": rgba(0, 0, 0, 0.14),
+  "maxDark-opacity15": rgba(0, 0, 0, 0.15),
+  "maxDark-opacity16": rgba(0, 0, 0, 0.16),
+  "maxDark-opacity20": rgba(0, 0, 0, 0.2),
+  "avgDark-opacity20": rgba(33, 33, 33, 0.2),
+  "avgDark-opacity40": rgba(47, 48, 58, 0.4),
+  "avgDark-opacity80": rgba(47, 48, 58, 0.8),
+  "minDark-opacity50": rgba(117, 117, 117, 0.5),
+);
+@function getColorDark($key) {
+  @return map-get($colors-dark, $key);
+}
+// accent colors
+$colors-accent: (
+  "accent-primary": #2196f3,
+  "accent-button": #188ce8,
+  "accent-overlay": rgba(33, 150, 243, 0.9),
+);
+@function getColorAccent($key) {
+  @return map-get($colors-accent, $key);
+}

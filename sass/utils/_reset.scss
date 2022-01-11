@@ -1,0 +1,41 @@
+// remove margin from h, p
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+// remove bullets
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+// remove link underline
+a {
+  text-decoration: none;
+}
+// image styles
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+// body
+body {
+  color: #757575;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #ffffff;
+}
+// visually-hidden
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

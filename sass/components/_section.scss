@@ -1,0 +1,29 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section--bg-color {
+  background-color: getColorLight("light-bg");
+}
+.section__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18em;
+  @include titleFont();
+  color: getColorDark("secondary");
+}
+
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+// .section--bg-color {
+//   background-color: getColorLight("light-bg");
+// }
+// .section__title {
+//   margin-bottom: 50px;
+//   font-size: 36px;
+//   line-height: 1.17em;
+//   @include titleFont();
+//   color: getColorDark("secondary");
+// }
