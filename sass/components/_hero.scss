@@ -1,6 +1,6 @@
 .hero-overlay {
   text-align: center;
-  max-width: 480px;
+  max-width: 1600px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -12,6 +12,9 @@
     url(../images/hero_background.jpg);
   //   @include background;
   background-color: getColorLight("hero-bg");
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
 }
 .hero-section__button {
   padding: 10px 32px;

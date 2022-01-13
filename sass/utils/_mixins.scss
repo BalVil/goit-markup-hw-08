@@ -13,6 +13,15 @@
   line-height: $l-h;
   letter-spacing: $l-s;
 }
+@mixin centeredFlex($d-type: flex, $a-items: center) {
+  display: $d-type;
+  align-items: $a-items;
+  justify-content: center;
+}
+@mixin background {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 // @mixin centeredFlex($d-type: flex, $a-items: center) {
 //   display: $d-type;

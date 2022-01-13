@@ -1,0 +1,90 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+.menu-container {
+  padding: 48px 40px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: getColorDark("secondary");
+  background-color: getColorLight("light");
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    // height: 768px;
+
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // justify-content: space-between;
+    // flex-grow: 1;
+  }
+}
+.navigation,
+.contacts {
+}
+.navigation {
+}
+.navbox {
+  //   margin-bottom: ;
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.authnav {
+  margin-bottom: 64px;
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.social-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+// Прибрати media нижче?
+@media screen and (min-width: 768px) {
+  .social-menu .social {
+    display: flex;
+  }
+  .social-menu .social__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .social-menu .social__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22em;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}

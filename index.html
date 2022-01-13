@@ -23,14 +23,73 @@
           <a href="" class="logo header__logo"
             >Web<span class="logo__text">Studio</span></a
           >
-          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
             <svg width="40" height="40" aria-label="Переключатель мобильного меню">
               <use class="icon-cross" href="./images/sprite.svg#close_cross"></use>
               <use class="icon-menu" href="./images/sprite.svg#menu_burger"></use>
             </svg>
           </button>
 
-          <div class="menu-container" id="menu-container" data-menu>Контент</div>
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="navigation">
+              <ul class="navbox">
+                <li class="navbox__item">
+                  <a href="" class="navbox__link navbox__link--current primary-link"
+                    >Студия</a
+                  >
+                </li>
+                <li class="navbox__item">
+                  <a href="./portfolio.html" class="navbox__link primary-link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="navbox__item">
+                  <a href="" class="navbox__link primary-link">Контакты</a>
+                </li>
+              </ul>
+                </div>
+            <div class="contacts">
+              <ul class="authnav">
+                <li class="authnav__item">
+                  <a href="mailto:info@devstudio.com" class="authnav__link primary-link">
+                    <svg class="authnav__icon authnav__icon--left" width="16" height="12">
+                      <use href="./images/sprite.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="authnav__item">
+                  <a href="tel:+380961111111" class="authnav__link primary-link">
+                    <svg class="authnav__icon authnav__icon--left" width="10" height="16">
+                      <use href="./images/sprite.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="social-menu">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="" aria-label="instagram" class="social__link">Instagram
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" aria-label="twitter" class="social__link">Twitter
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" aria-label="facebook" class="social__link">Facebook
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" aria-label="linkedin" class="social__link">LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
 
           <!-- Navigation menu -->
           <!-- <ul class="navbox">

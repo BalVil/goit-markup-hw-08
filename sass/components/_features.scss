@@ -9,23 +9,12 @@
     display: flex;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
 }
-// 2-й варіант: flex одразу на блок
-// .features-list {
-//     display: flex;
-//   @media screen and (max-width: 1199px) {
-//     flex-wrap: wrap;
-//   }
-// }
 .features-list__item {
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
   @media screen and (min-width: 1200px) {
-    // min-width: 270px;
     width: calc((100% - 90px) / 4);
   }
 
