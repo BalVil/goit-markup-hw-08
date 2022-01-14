@@ -25,7 +25,28 @@
     fill: getColorLight("light");
   }
 }
-
+.social-name {
+  display: flex;
+}
+.social-name__item:not(:last-child) {
+  margin-right: 20px;
+}
+.social-name__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22em;
+  letter-spacing: 0.02em;
+  color: getColorAccent("accent-primary");
+}
+.social-name__item::after {
+  height: 40px;
+  width: 1px;
+  margin: 0 5px;
+  overflow: hidden;
+  background-color: rgb(221, 221, 221);
+  border-right: 2px solid rgb(196, 24, 24);
+}
 // .social {
 //   @include centeredFlex();
 // }
