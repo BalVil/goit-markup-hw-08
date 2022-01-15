@@ -1,5 +1,5 @@
 .hero-overlay {
-  text-align: center;
+  // text-align: center;
   max-width: 1600px;
   height: 400px;
   // margin-left: auto;
@@ -16,7 +16,29 @@
     height: 600px;
   }
 }
+.hero-section {
+  padding: 118px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
+}
+.hero-section__title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: getColorLight("light");
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36em;
+  }
+}
 .hero-section__button {
+  margin: 0 auto;
   padding: 10px 32px;
 }
 // .hero-overlay {

@@ -1,66 +1,20 @@
 .client {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+  margin: -15px;
 }
 .client__item {
-  flex-basis: calc((100% - 30px) / 2);
   height: 92px;
-  &:not(:nth-last-child(-n + 2)) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-  }
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - (2 * 30px)) / 3);
-  }
-  &:not(:nth-last-child(-n + 3)) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      margin-bottom: 30px;
-    }
+    flex-basis: calc((100% - 6 * 15px) / 3);
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - (5 * 30px)) / 6);
+    flex-basis: calc((100% - 12 * 15px) / 6);
   }
 }
-// .client__item {
-//   height: 92px;
-//   width: calc((100% - 30px) / 2);
-
-//   @media screen and (min-width: 768px) {
-//     width: calc((100% - (2 * 30px)) / 3);
-//   }
-//   @media screen and (min-width: 1200px) {
-//     // min-width: 170px;
-//     width: calc((100% - (5 * 30px)) / 6);
-//   }
-//   &:not(:nth-child(2n)) {
-//     @media screen and (max-width: 767px) {
-//       margin-right: 30px;
-//     }
-//   }
-//   &:not(:nth-last-child(-n + 2)) {
-//     @media screen and (max-width: 767px) {
-//       margin-bottom: 30px;
-//     }
-//   }
-//   &:not(:nth-child(3n)) {
-//     @media screen and (min-width: 768px) and (max-width: 1199px) {
-//       margin-right: 30px;
-//     }
-//   }
-//   &:not(:nth-last-child(-n + 3)) {
-//     @media screen and (min-width: 768px) and (max-width: 1199px) {
-//       margin-bottom: 30px;
-//     }
-//   }
-//   &:not(:last-child) {
-//     @media screen and (min-width: 1200px) {
-//       margin-right: 30px;
-//     }
-//   }
-// }
-
 .client__thumb {
   height: 100%;
   @include centeredFlex();
