@@ -1,5 +1,5 @@
 .button {
-  // min-width: 73px;
+  min-width: 200px;
   @include centeredFlex();
   font-weight: bold;
   font-size: 16px;
@@ -31,6 +31,7 @@
   }
 }
 .filter__button {
+  min-width: 73px;
   margin-right: 8px;
   margin-bottom: 15px;
   padding: 6px 22px;

@@ -25,11 +25,22 @@
     fill: getColorLight("light");
   }
 }
+// menu-container social link
 .social-name {
   display: flex;
 }
-.social-name__item:not(:last-child) {
-  margin-right: 20px;
+.social-name__item {
+  display: inline-flex;
+
+  &:not(:last-child)::after {
+    content: "";
+    height: 22px;
+    width: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: top;
+    border-right: 2px solid getColorDark("avgDark-opacity20");
+  }
 }
 .social-name__link {
   font-style: normal;
@@ -39,13 +50,10 @@
   letter-spacing: 0.02em;
   color: getColorAccent("accent-primary");
 }
-.social-name__item::after {
-  height: 40px;
-  width: 1px;
-  margin: 0 5px;
-  overflow: hidden;
-  background-color: rgb(221, 221, 221);
-  border-right: 2px solid rgb(196, 24, 24);
+// footer social link
+.social__link--inverse {
+  background-color: getColorLight("light-opacity10");
+  fill: getColorLight("light");
 }
 // .social {
 //   @include centeredFlex();

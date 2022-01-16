@@ -48,8 +48,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
     padding: 48px 40px;
 
     &.is-open {
@@ -79,11 +79,6 @@
     align-items: center;
   }
 }
-.contacts {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 64px;
-  }
-}
 .navbox {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -101,10 +96,11 @@
   }
 }
 .navbox__link {
-  position: relative;
   color: getColorDark("secondary");
   // @include Animation(color);
-
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
   &:hover,
   &:focus {
     color: getColorAccent("accent-primary");
@@ -122,18 +118,18 @@
       width: 100%;
       height: 4px;
       bottom: 0;
+
       background-color: getColorAccent("accent-primary");
       border-radius: 2px;
     }
   }
 }
-.primary-link {
-  padding: 32px 0;
+.contacts {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
 }
 .authnav {
-  // @media screen and (max-width: 767px) {
-  //   margin-bottom: 64px;
-  // }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
@@ -143,7 +139,17 @@
     flex-direction: row-reverse;
   }
 }
+.authnav__item:last-child {
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+  }
+}
 .authnav__link {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -154,16 +160,13 @@
   // @include Animation(color);
 
   @media screen and (min-width: 768px) {
-    font-style: normal;
     font-size: 12px;
     line-height: 14px;
   }
 
   &:hover,
   &:focus {
-    @media screen and (min-width: 1200px) {
-      color: getColorAccent("accent-primary");
-    }
+    color: getColorAccent("accent-primary");
   }
 }
 .authnav__link--accent {
@@ -178,31 +181,21 @@
 }
 
 .authnav__icon {
+  fill: currentColor;
   @media screen and (max-width: 767px) {
     display: none;
   }
-  height: 16px;
-  fill: currentColor;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 14px;
+    max-height: 14px;
+  }
+}
+
+.authnav__icon--left {
+  margin-right: 10px;
 }
 .social-menu {
   @media screen and (min-width: 768px) {
     display: none;
-  }
-}
-// Прибрати media нижче?
-@media screen and (min-width: 768px) {
-  .social-menu .social {
-    display: flex;
-  }
-  .social-menu .social__item:not(:last-child) {
-    margin-right: 20px;
-  }
-  .social-menu .social__link {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22em;
-    letter-spacing: 0.02em;
-    color: #2196f3;
   }
 }

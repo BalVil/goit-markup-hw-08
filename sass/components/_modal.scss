@@ -9,9 +9,9 @@
   overflow-y: scroll;
 
   background-color: getColorDark("maxDark-opacity20");
-  //   opacity: 1;
-  //   visibility: visible;
-  //   @include Animation(opacity, visibility);
+  opacity: 1;
+  visibility: visible;
+  @include Animation(opacity, visibility);
 }
 .modal-container--is-hidden {
   visibility: hidden;
@@ -20,6 +20,12 @@
 }
 .modal {
   padding: 40px;
+  background-color: getColorLight("light");
+  box-shadow: 0px 1px 3px getColorDark("maxDark-opacity12"),
+    0px 1px 1px getColorDark("maxDark-opacity14"),
+    0px 2px 1px getColorDark("maxDark-opacity20");
+  border-radius: 4px;
+
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 50%;
@@ -27,23 +33,43 @@
     transform: translate(-50%, -50%);
     max-width: 450px;
     width: 100%;
+    transform: translate(-50%, -50%) scale(1);
+    @include Animation(transform);
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 528px;
   }
-
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  background-color: getColorLight("light");
-  box-shadow: 0px 1px 3px getColorDark("maxDark-opacity12"),
-    0px 1px 1px getColorDark("maxDark-opacity14"),
-    0px 2px 1px getColorDark("maxDark-opacity20");
-  border-radius: 4px;
-  //   transform: translate(-50%, -50%) scale(1);
-  //   @include Animation(transform);
 }
+.modal-container--is-hidden .modal {
+  @media screen and (min-width: 768px) {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+.circle-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid getColorDark("maxDark-opacity10");
+  border-radius: 50%;
+  background-color: getColorLight("light");
+  fill: getColorDark("maxDark-opacity10");
+  cursor: pointer;
+  @include Animation(fill);
+
+  &:hover,
+  &:focus {
+    fill: getColorAccent("accent-primary");
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}
+// .modal__circle-btn {
+//   top: 8px;
+//   right: 8px;
+// }
 
 // .modal-container {
 //   position: fixed;
