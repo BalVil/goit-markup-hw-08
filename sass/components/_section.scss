@@ -1,6 +1,7 @@
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -8,23 +9,10 @@
 }
 .section__title {
   margin-bottom: 30px;
+  font-weight: bold;
   font-size: 28px;
   line-height: 1.18em;
-  @include titleFont();
+  letter-spacing: 0.03em;
+  text-align: center;
   color: getColorDark("secondary");
 }
-
-// .section {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
-// }
-// .section--bg-color {
-//   background-color: getColorLight("light-bg");
-// }
-// .section__title {
-//   margin-bottom: 50px;
-//   font-size: 36px;
-//   line-height: 1.17em;
-//   @include titleFont();
-//   color: getColorDark("secondary");
-// }

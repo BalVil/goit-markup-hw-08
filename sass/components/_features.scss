@@ -13,8 +13,6 @@
 .features-list__item {
   @media screen and (min-width: 768px) {
     @include grid(2);
-    // flex-basis: calc((100% - 4 * 15px) / 2);
-    // margin: 15px;
   }
   @media screen and (min-width: 1200px) {
     @include grid(4);
@@ -35,11 +33,11 @@
 }
 .features-list__title {
   margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14em;
-  @include titleFont();
-  color: getColorDark("secondary");
+  font-weight: bold;
+  @include regularText();
+  text-align: center;
   text-transform: uppercase;
+  color: getColorDark("secondary");
   @media screen and (min-width: 768px) {
     text-align: start;
   }

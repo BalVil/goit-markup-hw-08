@@ -551,12 +551,11 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer-left">
-          <!-- Footer logo -->
+        <!-- Footer address -->
+        <div class="footer-address">
           <a href="" class="logo footer__logo"
             >Web<span class="logo__text--inverse">Studio</span></a
           >
-          <!-- Footer address -->
           <address class="address">
             <ul>
               <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
@@ -625,18 +624,15 @@
         </div>
         <!-- Footer subscribe -->
         <form class="subscribe">
-          <div class="subscribe__field">
-            <label for="subscribe" class="subscribe__title"
-              >подпишитесь на рассылку</label
-            >
+          <label class="subscribe__field">
+            <span class="subscribe__title">подпишитесь на рассылку</span>
             <input
               type="text"
               name="subscribe"
-              id="subscribe"
               placeholder="E-mail"
               class="subscribe__input"
             />
-          </div>
+          </label>
           <button type="submit" class="button subscribe__button">
             Подписаться
             <svg
@@ -649,7 +645,7 @@
           </button>
         </form>
       </div>
-      <script src="./js/menu.js"></script>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

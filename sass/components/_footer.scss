@@ -12,15 +12,18 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
   }
 }
-// footer address
+
 .footer-address {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
     text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 231px;
+    margin-right: 70px;
   }
 }
 .footer__logo {
@@ -43,14 +46,18 @@
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .social-footer__title {
   margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.14em;
-  @include titleFont();
-  color: getColorLight("light");
+  font-weight: bold;
+  @include regularText();
+  text-align: center;
   text-transform: uppercase;
+  color: getColorLight("light");
+
   @media screen and (min-width: 1200px) {
     text-align: start;
   }
@@ -78,15 +85,16 @@
   }
 }
 .subscribe__title {
-  display: inline-flex;
+  display: inline-block;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14em;
-  letter-spacing: 0.03em;
+  @include regularText();
   color: getColorLight("light");
   text-transform: uppercase;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .subscribe__input {
   width: 100%;
@@ -126,88 +134,3 @@
 .subscribe__icon--right {
   margin-left: 10px;
 }
-// .footer {
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   background-color: getColorDark("footer-bg");
-// }
-// .footer-left {
-//   width: 100%;
-// }
-// .footer__logo {
-//   display: inline-block;
-//   margin-right: 0;
-//   margin-bottom: 20px;
-// }
-// // footer address
-// .address {
-//   // min-width: 231px;
-//   // margin-right: 70px;
-//   font-style: normal;
-//   @include regularText($l-h: 1.71em);
-//   color: getColorLight("light");
-// }
-// .address__item:not(:last-child) {
-//   margin-bottom: 9px;
-// }
-// .address__link {
-//   color: getColorLight("light-opacity60");
-// }
-// // Footer social links & icons
-// .social-footer {
-//   margin-right: 93px;
-// }
-// .social-footer__title {
-//   margin-bottom: 20px;
-//   font-size: 14px;
-//   line-height: 1.14em;
-//   @include titleFont($t-a: start);
-//   color: getColorLight("light");
-//   text-transform: uppercase;
-// }
-// // Footer subscribe
-// .subscribe {
-//   @include centeredFlex($a-items: flex-end);
-//   width: 570px;
-// }
-// .subscribe__title {
-//   display: block;
-//   margin-bottom: 20px;
-//   font-size: 14px;
-//   line-height: 1.14em;
-//   @include titleFont($t-a: start);
-//   color: getColorLight("light");
-//   text-transform: uppercase;
-// }
-// .subscribe__input {
-//   width: 358px;
-//   margin-right: 12px;
-//   padding: 15px 16px;
-//   color: getColorLight("light");
-//   background-color: getColorDark("footer-bg");
-//   border: 1px solid getColorLight("light-opacity30");
-//   border-radius: 4px;
-//   filter: drop-shadow(0px 4px 4px getColorDark("maxDark-opacity15"));
-//   @include Animation(outline, border-color);
-
-//   &:focus {
-//     outline: 1px solid getColorAccent("accent-primary");
-//     border-color: getColorAccent("accent-primary");
-//   }
-//   &::placeholder {
-//     font-family: inherit;
-//     font-size: 16px;
-//     line-height: 1.25em;
-//     letter-spacing: 0.03em;
-//     color: getColorLight("light-opacity60");
-//   }
-// }
-// .subscribe__button {
-//   height: 50px;
-// }
-// .subscribe__icon {
-//   fill: getColorLight("light");
-// }
-// .subscribe__icon--right {
-//   margin-left: 10px;
-// }

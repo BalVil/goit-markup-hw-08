@@ -61,9 +61,7 @@
     flex-grow: 1;
     margin-left: 88px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
+    @include regularText($l-s: 0.02em);
   }
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
@@ -96,7 +94,7 @@
 }
 .navbox__link {
   color: getColorDark("secondary");
-  // @include Animation(color);
+  @include Animation(color);
   @media screen and (min-width: 768px) {
     padding: 32px 0;
   }
@@ -152,15 +150,14 @@
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17em;
   letter-spacing: 0.02em;
 
   color: getColorDark("theme");
-  // @include Animation(color);
+  @include Animation(color);
 
   @media screen and (min-width: 768px) {
-    font-size: 12px;
-    line-height: 14px;
+    @include regularText($l-s: 0.03em);
   }
 
   &:hover,

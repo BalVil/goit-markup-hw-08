@@ -6,8 +6,7 @@
 .client__item {
   height: 92px;
   @include grid(2);
-  // flex-basis: calc((100% - 4 * 15px) / 2);
-  // margin: 15px;
+
   @media screen and (min-width: 768px) {
     @include grid(3);
   }
@@ -22,7 +21,7 @@
   fill: getColorLight("icon");
   border: 1px solid getColorLight("icon");
   border-radius: 4px;
-  // @include Animation(fill, border);
+  @include Animation(fill, border);
 
   &:hover,
   &:focus {

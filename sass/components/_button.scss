@@ -11,7 +11,7 @@
   box-shadow: 0 4px 4px getColorDark("maxDark-opacity15");
   border: transparent;
   border-radius: 4px;
-  // @include Animation(background-color, box-shadow);
+  @include Animation(background-color, box-shadow);
 
   &:hover,
   &:focus {
@@ -24,13 +24,14 @@
   min-width: 73px;
   padding: 6px 22px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.625em;
   letter-spacing: 0.03em;
   text-align: center;
   color: getColorDark("secondary");
   background-color: getColorLight("light-bg");
   box-shadow: none;
-  //   @include Animation(color);
+  @include Animation(color);
 
   &:hover,
   &:focus {
@@ -40,55 +41,3 @@
       0 2px 2px getColorDark("maxDark-opacity12");
   }
 }
-
-// .button {
-//   min-width: 200px;
-//   @include centeredFlex();
-//   font-weight: bold;
-//   font-size: 16px;
-//   line-height: 1.875em;
-//   letter-spacing: 0.06em;
-//   cursor: pointer;
-//   color: getColorLight("light");
-//   background-color: getColorAccent("accent-primary");
-//   box-shadow: 0 4px 4px getColorDark("maxDark-opacity15");
-//   border: transparent;
-//   border-radius: 4px;
-//   @include Animation(background-color, box-shadow);
-
-//   &:hover,
-//   &:focus {
-//     background-color: getColorAccent("accent-button");
-//     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-//   }
-// }
-// // filter buttons (radio button)
-// .filter {
-//   @include centeredFlex();
-//   margin-bottom: 50px;
-
-//   &__item:not(:last-child) {
-//     margin-right: 8px;
-//   }
-// }
-// .filter__button {
-//   min-width: auto;
-//   display: inline-block;
-//   padding: 6px 22px;
-//   font-weight: 500;
-//   line-height: 1.625em;
-//   letter-spacing: 0.03em;
-//   text-align: center;
-//   color: getColorDark("secondary");
-//   background-color: getColorLight("light-bg");
-//   box-shadow: none;
-//   @include Animation(color);
-
-//   &:hover,
-//   &:focus {
-//     color: getColorLight("light");
-//     box-shadow: 0 3px 1px getColorDark("maxDark-opacity10"),
-//       0 1px 2px getColorDark("maxDark-opacity8"),
-//       0 2px 2px getColorDark("maxDark-opacity12");
-//   }
-// }

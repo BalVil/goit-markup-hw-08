@@ -7,12 +7,7 @@
   flex-basis: calc(100% / #{$value} - #{$margin} * 2);
   margin: $margin;
 }
-@mixin titleFont($f-w: bold, $l-s: 0.03em, $t-a: center) {
-  font-weight: $f-w;
-  letter-spacing: $l-s;
-  text-align: $t-a;
-}
-@mixin regularText($l-h: 16px, $l-s: 0.03em) {
+@mixin regularText($l-h: 1.14em, $l-s: 0.03em) {
   font-size: 14px;
   line-height: $l-h;
   letter-spacing: $l-s;
