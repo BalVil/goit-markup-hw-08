@@ -697,7 +697,7 @@ body {
 }
 
 .menu-button {
-  z-index: 1;
+  z-index: 99;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -759,6 +759,7 @@ body {
   .menu-container.is-open {
     display: block;
     overflow-y: scroll;
+    z-index: 1;
   }
 }
 
