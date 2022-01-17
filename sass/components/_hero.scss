@@ -1,18 +1,62 @@
 .hero-overlay {
-  max-width: 1600px;
-  height: 400px;
-  // margin-left: auto;
-  // margin-right: auto;
+  @include background;
+  background-size: cover;
+  background-color: getColorLight("hero-bg");
   background-image: linear-gradient(
       to right,
       getColorDark("avgDark-opacity40"),
       getColorDark("avgDark-opacity40")
     ),
-    url(../images/hero_background.jpg);
-  //   @include background;
-  background-color: getColorLight("hero-bg");
+    url(../images/hero/hero-480.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-960.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-768.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColorDark("avgDark-opacity40"),
+          getColorDark("avgDark-opacity40")
+        ),
+        url(../images/hero/hero-1536.jpg);
+    }
+  }
   @media screen and (min-width: 1200px) {
-    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-1600.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColorDark("avgDark-opacity40"),
+          getColorDark("avgDark-opacity40")
+        ),
+        url(../images/hero/hero-3200.jpg);
+    }
   }
 }
 .hero-section {
@@ -37,7 +81,8 @@
   }
 }
 .hero-section__button {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 32px;
 }
 // .hero-overlay {

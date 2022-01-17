@@ -22,26 +22,3 @@
 @mixin Animation($properties...) {
   transition: 250ms $timing-function;
 }
-
-// @mixin centeredFlex($d-type: flex, $a-items: center) {
-//   display: $d-type;
-//   align-items: $a-items;
-//   justify-content: center;
-// }
-// @mixin titleFont($f-w: bold, $l-s: 0.03em, $t-a: center) {
-//   font-weight: $f-w;
-//   letter-spacing: $l-s;
-//   text-align: $t-a;
-// }
-// @mixin regularText($l-h: 16px, $l-s: 0.03em) {
-//   font-size: 14px;
-//   line-height: $l-h;
-//   letter-spacing: $l-s;
-// }
-// @mixin background {
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }
-// @mixin Animation($properties...) {
-//   transition: 250ms $timing-function;
-// }

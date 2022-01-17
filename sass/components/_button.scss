@@ -20,16 +20,6 @@
   }
 }
 // filter buttons (radio button)
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -8px;
-  margin-bottom: -15px;
-  @media screen and (min-width: 768px) {
-    justify-content: center;
-    margin-bottom: 0;
-  }
-}
 .filter__button {
   min-width: 73px;
   margin-right: 8px;
