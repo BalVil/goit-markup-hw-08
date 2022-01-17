@@ -1,9 +1,12 @@
-@mixin centeredFlex($d-type: flex, $a-items: center) {
+@mixin centeredFlex($d-type: flex, $a-items: center, $j-content: center) {
   display: $d-type;
   align-items: $a-items;
-  justify-content: center;
+  justify-content: $j-content;
 }
-
+@mixin grid($value, $margin: 15px) {
+  flex-basis: calc(100% / #{$value} - #{$margin} * 2);
+  margin: $margin;
+}
 @mixin titleFont($f-w: bold, $l-s: 0.03em, $t-a: center) {
   font-weight: $f-w;
   letter-spacing: $l-s;

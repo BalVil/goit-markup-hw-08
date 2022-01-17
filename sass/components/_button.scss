@@ -22,8 +22,6 @@
 // filter buttons (radio button)
 .filter__button {
   min-width: 73px;
-  margin-right: 8px;
-  margin-bottom: 15px;
   padding: 6px 22px;
   font-weight: 500;
   line-height: 1.625em;
@@ -40,9 +38,6 @@
     box-shadow: 0 3px 1px getColorDark("maxDark-opacity10"),
       0 1px 2px getColorDark("maxDark-opacity8"),
       0 2px 2px getColorDark("maxDark-opacity12");
-  }
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0;
   }
 }
 

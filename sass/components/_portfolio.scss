@@ -1,8 +1,6 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -8px;
-  margin-bottom: -15px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
@@ -12,22 +10,16 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
-
-  //   &__item:not(:last-child) {
-  //     margin-right: 8px;
-  //   }
 }
 .filter__item {
-  margin-right: 8px;
-}
-// .filter {
-//   @include centeredFlex();
-//   margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
-//   &__item:not(:last-child) {
-//     margin-right: 8px;
-//   }
-// }
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
 .portfolio {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -37,11 +29,10 @@
 }
 .portfolio__item {
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+    @include grid(2);
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 6 * 15px) / 3);
+    @include grid(3);
   }
 
   &:not(:last-child) {
@@ -50,14 +41,6 @@
     }
   }
 }
-//   &:not(:nth-child(3n)) {
-//     margin-right: 30px;
-//   }
-//   &:not(:nth-last-child(-n + 3)) {
-//     margin-bottom: 30px;
-//   }
-// }
-
 // portfolio link overlay
 .portfolio__link {
   position: relative;
@@ -115,6 +98,20 @@
   @media screen and (min-width: 768px) {
     flex-grow: 1;
   }
+}
+.portfolio__name {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2em;
+  letter-spacing: 0.06em;
+  color: getColorDark("secondary");
+}
+.portfolio__text {
+  font-size: 16px;
+  line-height: 1.87em;
+  letter-spacing: 0.03em;
+  color: getColorDark("theme");
 }
 
 // .portfolio {

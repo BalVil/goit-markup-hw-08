@@ -16,10 +16,8 @@
     align-items: baseline;
   }
 }
-// &:not(:last-child) {
-//   margin-bottom: 60px;
-// }
-.footer-adress {
+// footer address
+.footer-address {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
     text-align: center;
@@ -29,7 +27,6 @@
   display: inline-block;
   margin-bottom: 20px;
 }
-// footer address
 .address {
   font-style: normal;
   @include regularText($l-h: 1.71em);
