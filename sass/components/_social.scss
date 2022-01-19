@@ -28,6 +28,9 @@
 // menu-container social link
 .social-name {
   display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .social-name__item {
   display: inline-flex;

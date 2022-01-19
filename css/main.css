@@ -228,6 +228,14 @@ body {
   color: #212121;
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17em;
+  }
+}
+
 .logo {
   font-family: "Raleway", "Verdana", sans-serif;
   font-weight: bold;
@@ -354,6 +362,12 @@ body {
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .social-name {
+    display: none;
+  }
+}
+
 .social-name__item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -385,6 +399,7 @@ body {
 }
 
 .modal-container {
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -414,7 +429,7 @@ body {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     position: absolute;
     top: 50%;
@@ -451,8 +466,7 @@ body {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: #ffffff;
-  fill: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   cursor: pointer;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -681,40 +695,53 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 60px;
+@media screen and (max-width: 767px) {
+  .navbar {
+    min-height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .navbar {
     min-height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .menu-button {
-  z-index: 99;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button.is-open {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .icon-cross {
@@ -757,11 +784,21 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     padding: 48px 40px;
   }
   .menu-container.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
     overflow-y: scroll;
     z-index: 1;
   }
@@ -794,7 +831,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .navigation {
-    margin-bottom: 306px;
+    margin-bottom: 64px;
   }
 }
 
@@ -865,7 +902,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts {
+  .authnav {
     margin-bottom: 64px;
   }
 }
@@ -937,11 +974,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .authnav__link--accent {
-    font-style: normal;
-    font-weight: 500;
     font-size: 34px;
     line-height: 1.18em;
-    letter-spacing: 0.02em;
     color: #2196f3;
   }
 }
@@ -956,20 +990,16 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .authnav__icon {
-    max-width: 14px;
-    max-height: 14px;
+    margin-right: 10px;
   }
 }
 
-.authnav__icon--left {
-  margin-right: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .social-menu {
-    display: none;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .authnav__icon {
+    width: 14px;
+    height: 14px;
   }
 }
 

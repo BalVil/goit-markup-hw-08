@@ -1,13 +1,19 @@
 .menu-button {
-  z-index: 99;
-  display: inline-flex;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+.menu-button.is-open {
+  position: sticky;
 }
 .icon-cross {
   display: none;
@@ -46,11 +52,14 @@
     top: 0;
     left: 0;
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     padding: 48px 40px;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
       overflow-y: scroll;
       z-index: 1;
     }
@@ -69,7 +78,7 @@
 }
 .navigation {
   @media screen and (max-width: 767px) {
-    margin-bottom: 306px;
+    margin-bottom: 64px;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -121,12 +130,10 @@
     }
   }
 }
-.contacts {
+.authnav {
   @media screen and (max-width: 767px) {
     margin-bottom: 64px;
   }
-}
-.authnav {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
@@ -167,11 +174,8 @@
 }
 .authnav__link--accent {
   @media screen and (max-width: 767px) {
-    font-style: normal;
-    font-weight: 500;
     font-size: 34px;
     line-height: 1.18em;
-    letter-spacing: 0.02em;
     color: getColorAccent("accent-primary");
   }
 }
@@ -181,17 +185,11 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    max-width: 14px;
-    max-height: 14px;
-  }
-}
-
-.authnav__icon--left {
-  margin-right: 10px;
-}
-.social-menu {
   @media screen and (min-width: 768px) {
-    display: none;
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 14px;
+    height: 14px;
   }
 }
