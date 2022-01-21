@@ -1,5 +1,6 @@
 .filter {
   display: flex;
+  margin-top: -15px;
 
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
@@ -13,12 +14,14 @@
     margin-bottom: 50px;
   }
 }
-
-.filter__item:nth-child(-n + 3) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 15px;
-  }
+.filter__item {
+  margin-top: 15px;
 }
+// .filter__item:nth-child(-n + 3) {
+//   @media screen and (max-width: 767px) {
+//     margin-bottom: 15px;
+//   }
+// }
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }

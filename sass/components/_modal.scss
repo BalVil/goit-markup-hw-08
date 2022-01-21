@@ -1,5 +1,5 @@
 .modal-container {
-  z-index: 3;
+  // z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +38,10 @@
     transform: translate(-50%, -50%) scale(1);
     @include Animation(transform);
   }
+
+  // @media screen and (min-width: 600px) and (orientation: landscape) and (max-width: 915px) {
+  //   top: 100%;
+  // }
 
   @media screen and (min-width: 1200px) {
     max-width: 528px;
@@ -78,19 +82,23 @@
     line-height: 1.5em;
   }
 }
+
 // Feedback form
 .form__group,
 .form__comment {
-  display: block;
   position: relative;
+
+  display: block;
   margin-bottom: 10px;
-}
-.form__label {
-  display: inline-block;
-  margin-bottom: 4px;
+
   font-size: 12px;
   line-height: 1.167em;
   letter-spacing: 0.01em;
+}
+
+.form__icon-box {
+  position: relative;
+  margin-top: 4px;
 }
 .form-control {
   width: 100%;
@@ -121,6 +129,7 @@
   width: 18px;
   height: 18px;
   fill: getColorDark("secondary");
+  transform: translateY(-50%);
   @include Animation(fill);
 
   .form__group:focus-within & {

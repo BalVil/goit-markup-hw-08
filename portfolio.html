@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфолио</title>
+    <title>
+      Портфолио - наши лучшие проекты, которыми клиенты довольны, а мы гордимся
+    </title>
+    <meta
+      name="description"
+      content="Используем последние разработки в IT, предлагаем несколько итоговых вариантов клиентам, вовремя предоставляем всю информацию по проекту — прибыльность вашего бизнеса увеличится более чем на 30% за 6 месяцев сотрудничества с нами"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,54 +22,58 @@
   <body>
     <!-- Page header-->
     <header class="page-header">
-      <div class="container page-header__container">
+      <div class="container">
         <!-- Main navigation to other pages -->
         <nav class="navbar">
           <!-- header logo  -->
-          <a href="" class="logo header__logo"
-            >Web<span class="logo__text">Studio</span></a
-          >
+          <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
           <button
             type="button"
-            class="menu-button"
+            class="menu-burger js-open-menu"
             aria-expanded="false"
             aria-controls="menu-container"
-            data-menu-button
           >
             <svg
+              class="menu-burger__icon"
               width="40"
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use
-                class="icon-cross"
-                href="./images/sprite.svg#close_cross"
-              ></use>
-              <use
-                class="icon-burger"
-                href="./images/sprite.svg#menu_burger"
-              ></use>
+              <use href="./images/sprite.svg#menu_burger"></use>
             </svg>
           </button>
 
           <!-- Navigation menu -->
-          <div class="menu-container" id="menu-container" data-menu>
+          <div class="menu-container js-menu-container" id="menu-container">
+            <button
+              type="button"
+              class="menu-close js-close-menu"
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <svg
+                class="menu-close__icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use href="./images/sprite.svg#close_cross"></use>
+              </svg>
+            </button>
             <div class="navigation">
               <ul class="navbox">
                 <li class="navbox__item">
-                  <a href="./index.html" class="navbox__link primary-link"
-                    >Студия</a
-                  >
+                  <a href="./index.html" class="navbox__link">Студия</a>
                 </li>
                 <li class="navbox__item">
                   <a
                     href="./portfolio.html"
-                    class="navbox__link navbox__link--current primary-link"
+                    class="navbox__link navbox__link--current"
                     >Портфолио</a
                   >
                 </li>
                 <li class="navbox__item">
-                  <a href="" class="navbox__link primary-link">Контакты</a>
+                  <a href="/" class="navbox__link">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -159,26 +169,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/technokryak-450.jpg 1x,
-                        ./images/portfolio/technokryak-900.jpg 2x
+                        ./images/portfolio/technokryak-450.webp 1x,
+                        ./images/portfolio/technokryak-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/technokryak-354.webp 1x,
+                        ./images/portfolio/technokryak-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/technokryak-354.jpg 1x,
                         ./images/portfolio/technokryak-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/technokryak-370.webp 1x,
+                        ./images/portfolio/technokryak-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/technokryak-370.jpg 1x,
                         ./images/portfolio/technokryak-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/technokryak-450.jpg 1x,
+                        ./images/portfolio/technokryak-900.jpg 2x
+                      "
                       src="./images/portfolio/technokryak-450.jpg"
                       alt="Технокряк"
                     />
@@ -201,26 +235,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/poster-450.jpg 1x,
-                        ./images/portfolio/poster-900.jpg 2x
+                        ./images/portfolio/poster-450.webp 1x,
+                        ./images/portfolio/poster-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-354.webp 1x,
+                        ./images/portfolio/poster-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/poster-354.jpg 1x,
                         ./images/portfolio/poster-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-370.webp 1x,
+                        ./images/portfolio/poster-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/poster-370.jpg 1x,
                         ./images/portfolio/poster-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/poster-450.jpg 1x,
+                        ./images/portfolio/poster-900.jpg 2x
+                      "
                       src="./images/portfolio/poster-450.jpg"
                       alt="Постер New Orlean vs Golden Star"
                     />
@@ -245,26 +303,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/restaurant-450.jpg 1x,
-                        ./images/portfolio/restaurant-900.jpg 2x
+                        ./images/portfolio/restaurant-450.webp 1x,
+                        ./images/portfolio/restaurant-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-354.webp 1x,
+                        ./images/portfolio/restaurant-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/restaurant-354.jpg 1x,
                         ./images/portfolio/restaurant-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-370.webp 1x,
+                        ./images/portfolio/restaurant-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/restaurant-370.jpg 1x,
                         ./images/portfolio/restaurant-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/restaurant-450.jpg 1x,
+                        ./images/portfolio/restaurant-900.jpg 2x
+                      "
                       src="./images/portfolio/restaurant-450.jpg"
                       alt="Ресторан Seafood"
                     />
@@ -287,26 +369,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/prime-450.jpg 1x,
-                        ./images/portfolio/prime-900.jpg 2x
+                        ./images/portfolio/prime-450.webp 1x,
+                        ./images/portfolio/prime-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-354.webp 1x,
+                        ./images/portfolio/prime-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/prime-354.jpg 1x,
                         ./images/portfolio/prime-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/prime-370.webp 1x,
+                        ./images/portfolio/prime-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/prime-370.jpg 1x,
                         ./images/portfolio/prime-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/prime-450.jpg 1x,
+                        ./images/portfolio/prime-900.jpg 2x
+                      "
                       src="./images/portfolio/prime-450.jpg"
                       alt="Проект Prime"
                     />
@@ -329,26 +435,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/boxes-450.jpg 1x,
-                        ./images/portfolio/boxes-900.jpg 2x
+                        ./images/portfolio/boxes-450.webp 1x,
+                        ./images/portfolio/boxes-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-354.webp 1x,
+                        ./images/portfolio/boxes-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/boxes-354.jpg 1x,
                         ./images/portfolio/boxes-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/boxes-370.webp 1x,
+                        ./images/portfolio/boxes-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/boxes-370.jpg 1x,
                         ./images/portfolio/boxes-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/boxes-450.jpg 1x,
+                        ./images/portfolio/boxes-900.jpg 2x
+                      "
                       src="./images/portfolio/boxes-450.jpg"
                       alt="Проект Boxes"
                     />
@@ -371,26 +501,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/inspiration-450.jpg 1x,
-                        ./images/portfolio/inspiration-900.jpg 2x
+                        ./images/portfolio/inspiration-450.webp 1x,
+                        ./images/portfolio/inspiration-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-354.webp 1x,
+                        ./images/portfolio/inspiration-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/inspiration-354.jpg 1x,
                         ./images/portfolio/inspiration-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-370.webp 1x,
+                        ./images/portfolio/inspiration-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/inspiration-370.jpg 1x,
                         ./images/portfolio/inspiration-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/inspiration-450.jpg 1x,
+                        ./images/portfolio/inspiration-900.jpg 2x
+                      "
                       src="./images/portfolio/inspiration-450.jpg"
                       alt="Inspiration has no Borders"
                     />
@@ -413,26 +567,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/edition-450.jpg 1x,
-                        ./images/portfolio/edition-900.jpg 2x
+                        ./images/portfolio/edition-450.webp 1x,
+                        ./images/portfolio/edition-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/edition-354.webp 1x,
+                        ./images/portfolio/edition-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/edition-354.jpg 1x,
                         ./images/portfolio/edition-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/edition-370.webp 1x,
+                        ./images/portfolio/edition-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/edition-370.jpg 1x,
                         ./images/portfolio/edition-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/edition-450.jpg 1x,
+                        ./images/portfolio/edition-900.jpg 2x
+                      "
                       src="./images/portfolio/edition-450.jpg"
                       alt="Издание Limited Edition"
                     />
@@ -455,26 +633,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/LAB-450.jpg 1x,
-                        ./images/portfolio/LAB-900.jpg 2x
+                        ./images/portfolio/LAB-450.webp 1x,
+                        ./images/portfolio/LAB-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/LAB-354.webp 1x,
+                        ./images/portfolio/LAB-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/LAB-354.jpg 1x,
                         ./images/portfolio/LAB-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/LAB-370.webp 1x,
+                        ./images/portfolio/LAB-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/LAB-370.jpg 1x,
                         ./images/portfolio/LAB-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/LAB-450.jpg 1x,
+                        ./images/portfolio/LAB-900.jpg 2x
+                      "
                       src="./images/portfolio/LAB-450.jpg"
                       alt="Проект LAB"
                     />
@@ -497,26 +699,50 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio/growing-450.jpg 1x,
-                        ./images/portfolio/growing-900.jpg 2x
+                        ./images/portfolio/growing-450.webp 1x,
+                        ./images/portfolio/growing-900.webp 2x
                       "
+                      type="image/webp"
                       media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-354.webp 1x,
+                        ./images/portfolio/growing-708.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/growing-354.jpg 1x,
                         ./images/portfolio/growing-708.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-370.webp 1x,
+                        ./images/portfolio/growing-740.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
                     />
                     <source
                       srcset="
                         ./images/portfolio/growing-370.jpg 1x,
                         ./images/portfolio/growing-740.jpg 2x
                       "
+                      type="image/jpeg"
                       media="(min-width: 1200px)"
                     />
                     <img
+                      loading="lazy"
+                      srcset="
+                        ./images/portfolio/growing-450.jpg 1x,
+                        ./images/portfolio/growing-900.jpg 2x
+                      "
                       src="./images/portfolio/growing-450.jpg"
                       alt="Growing Business"
                     />
@@ -543,7 +769,7 @@
       <div class="container footer__container">
         <!-- Footer address -->
         <div class="footer-address">
-          <a href="" class="logo footer__logo"
+          <a href="/" class="logo footer__logo"
             >Web<span class="logo__text--inverse">Studio</span></a
           >
           <address class="address">
@@ -568,7 +794,7 @@
           <ul class="social">
             <li class="social__item">
               <a
-                href=""
+                href="/"
                 aria-label="instagram"
                 class="social__link social__link--inverse"
               >
@@ -579,7 +805,7 @@
             </li>
             <li class="social__item">
               <a
-                href=""
+                href="/"
                 aria-label="twitter"
                 class="social__link social__link--inverse"
               >
@@ -590,7 +816,7 @@
             </li>
             <li class="social__item">
               <a
-                href=""
+                href="/"
                 aria-label="facebook"
                 class="social__link social__link--inverse"
               >
@@ -601,7 +827,7 @@
             </li>
             <li class="social__item">
               <a
-                href=""
+                href="/"
                 aria-label="linkedin"
                 class="social__link social__link--inverse"
               >
@@ -636,6 +862,12 @@
         </form>
       </div>
     </footer>
-    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/menu.js"></script>
   </body>
 </html>

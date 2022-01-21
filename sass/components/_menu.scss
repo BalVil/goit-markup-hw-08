@@ -1,5 +1,5 @@
-.menu-button {
-  z-index: 2;
+.menu-burger {
+  // z-index: 2;
   width: 40px;
   height: 40px;
   margin: 0;
@@ -12,36 +12,14 @@
     display: none;
   }
 }
-.menu-button.is-open {
-  position: sticky;
-}
-.icon-cross {
-  display: none;
-
-  &:hover,
-  &:focus {
-    fill: getColorAccent("accent-primary");
-  }
-  .menu-button.is-open & {
-    display: block;
-  }
-}
-.icon-burger {
-  display: block;
-
-  &:hover,
-  &:focus {
-    fill: getColorAccent("accent-primary");
-  }
-
-  .menu-button.is-open & {
-    display: none;
-  }
+.menu-burger__icon:hover,
+.menu-burger__icon:focus {
+  fill: getColorAccent("accent-primary");
 }
 .menu-container {
   font-weight: 500;
   font-size: 40px;
-  line-height: 47px;
+  line-height: 1.175em;
   letter-spacing: 0.02em;
   color: getColorDark("secondary");
   background-color: getColorLight("light");
@@ -56,12 +34,13 @@
     padding: 48px 40px;
 
     &.is-open {
+      z-index: 1;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: fixed;
+
       overflow-y: scroll;
-      z-index: 1;
     }
   }
   @media screen and (min-width: 768px) {
@@ -76,9 +55,35 @@
     margin-left: 93px;
   }
 }
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  // @media screen and (min-width: 481px) and (max-width: 767px) {
+  //   position: absolute;
+  // }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-close__button:hover,
+.menu-close__button:focus {
+  fill: getColorAccent("accent-primary");
+}
+
 .navigation {
   @media screen and (max-width: 767px) {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -155,10 +160,8 @@
   display: flex;
   align-items: center;
   font-style: normal;
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.17em;
-  letter-spacing: 0.02em;
 
   color: getColorDark("theme");
   @include Animation(color);
@@ -173,7 +176,11 @@
   }
 }
 .authnav__link--accent {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 380px) {
+    font-size: 26px;
+    color: getColorAccent("accent-primary");
+  }
+  @media screen and (min-width: 381px) and (max-width: 767px) {
     font-size: 34px;
     line-height: 1.18em;
     color: getColorAccent("accent-primary");

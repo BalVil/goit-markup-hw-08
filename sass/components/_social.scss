@@ -28,6 +28,7 @@
 // menu-container social link
 .social-name {
   display: flex;
+  flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -46,11 +47,8 @@
   }
 }
 .social-name__link {
-  font-style: normal;
-  font-weight: 500;
   font-size: 18px;
   line-height: 1.22em;
-  letter-spacing: 0.02em;
   color: getColorAccent("accent-primary");
 }
 // footer social link
