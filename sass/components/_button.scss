@@ -1,16 +1,19 @@
 .button {
-  min-width: 200px;
   @include centeredFlex();
+  min-width: 200px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875em;
   letter-spacing: 0.06em;
-  cursor: pointer;
+
   color: getColorLight("light");
   background-color: getColorAccent("accent-primary");
   box-shadow: 0 4px 4px getColorDark("maxDark-opacity15");
   border: transparent;
   border-radius: 4px;
+  cursor: pointer;
+
   @include Animation(background-color, box-shadow);
 
   &:hover,
@@ -23,14 +26,17 @@
 .filter__button {
   min-width: 73px;
   padding: 6px 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625em;
   letter-spacing: 0.03em;
   text-align: center;
+
   color: getColorDark("secondary");
   background-color: getColorLight("light-bg");
   box-shadow: none;
+
   @include Animation(color);
 
   &:hover,

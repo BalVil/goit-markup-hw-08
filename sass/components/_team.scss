@@ -31,21 +31,25 @@
 .team__label {
   padding-top: 30px;
   padding-bottom: 24px;
+
   @media screen and (min-width: 1200px) {
     padding-bottom: 30px;
   }
 }
 .team__name {
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19em;
   letter-spacing: 0.03em;
   text-align: center;
+
   color: getColorDark("secondary");
 }
 .team__content {
   margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19em;
   letter-spacing: 0.03em;

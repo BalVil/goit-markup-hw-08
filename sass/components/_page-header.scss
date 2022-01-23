@@ -1,15 +1,17 @@
 .page-header {
   position: relative;
+
   border-bottom: 1px solid getColorLight("light-border");
 }
 .navbar {
   @media screen and (max-width: 767px) {
     min-height: 60px;
+
     @include centeredFlex($j-content: space-between);
   }
   @media screen and (min-width: 768px) {
-    min-height: 80px;
     display: flex;
     align-items: center;
+    min-height: 80px;
   }
 }

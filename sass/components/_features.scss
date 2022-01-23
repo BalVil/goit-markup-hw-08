@@ -28,16 +28,20 @@
   @include centeredFlex();
   height: 120px;
   margin-bottom: 30px;
+
   background-color: getColorLight("light-bg");
   border-radius: 4px;
 }
 .features-list__title {
   margin-bottom: 10px;
+
   font-weight: bold;
   @include regularText();
   text-align: center;
   text-transform: uppercase;
+
   color: getColorDark("secondary");
+
   @media screen and (min-width: 768px) {
     text-align: start;
   }

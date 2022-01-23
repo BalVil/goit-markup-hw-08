@@ -20,3 +20,11 @@
 @mixin Animation($properties...) {
   transition: 250ms $timing-function;
 }
+// hover, focus on links (header, social)
+
+// @each $name in navbox__link, authnav__link, social__link {
+//   .#{$name}:focus,
+//   .#{$name}:hover {
+//     color: getColorAccent("accent-primary");
+//   }
+// }

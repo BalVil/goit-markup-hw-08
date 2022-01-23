@@ -1,9 +1,9 @@
 .menu-burger {
-  // z-index: 2;
   width: 40px;
   height: 40px;
   margin: 0;
   padding: 0;
+
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -21,14 +21,16 @@
   font-size: 40px;
   line-height: 1.175em;
   letter-spacing: 0.02em;
+
   color: getColorDark("secondary");
   background-color: getColorLight("light");
 
   @media screen and (max-width: 767px) {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+
+    display: none;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
@@ -39,7 +41,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       overflow-y: scroll;
     }
   }
@@ -48,6 +49,7 @@
     justify-content: space-between;
     flex-grow: 1;
     margin-left: 88px;
+
     font-weight: 500;
     @include regularText($l-s: 0.02em);
   }
@@ -60,22 +62,26 @@
   position: absolute;
   top: 10px;
   right: 15px;
+
   width: 40px;
   height: 40px;
   margin: 0;
   padding: 0;
+
   border: none;
   background-color: transparent;
   cursor: pointer;
 
-  // @media screen and (min-width: 481px) and (max-width: 767px) {
-  //   position: absolute;
-  // }
+  // for iphone 6-8 landscape
+  @media screen and (min-width: 640px) and (max-width: 736px) {
+    right: calc(100vw - 80.5%);
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
 .menu-close__button:hover,
 .menu-close__button:focus {
   fill: getColorAccent("accent-primary");
@@ -108,7 +114,9 @@
 }
 .navbox__link {
   color: getColorDark("secondary");
+
   @include Animation(color);
+
   @media screen and (min-width: 768px) {
     padding: 32px 0;
   }
@@ -119,13 +127,15 @@
 }
 .navbox__link--current {
   position: relative;
+
   color: getColorAccent("accent-primary");
 
   &::after {
     @media screen and (min-width: 768px) {
       content: "";
-      display: block;
       position: absolute;
+
+      display: block;
       width: 100%;
       height: 4px;
       bottom: 0;
@@ -159,15 +169,21 @@
 .authnav__link {
   display: flex;
   align-items: center;
+
   font-style: normal;
   font-size: 24px;
   line-height: 1.17em;
 
   color: getColorDark("theme");
+
   @include Animation(color);
 
   @media screen and (min-width: 768px) {
-    @include regularText($l-s: 0.03em);
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include regularText($l-s: 0.02em);
   }
 
   &:hover,
@@ -178,17 +194,20 @@
 .authnav__link--accent {
   @media screen and (max-width: 380px) {
     font-size: 26px;
+
     color: getColorAccent("accent-primary");
   }
   @media screen and (min-width: 381px) and (max-width: 767px) {
     font-size: 34px;
     line-height: 1.18em;
+
     color: getColorAccent("accent-primary");
   }
 }
 
 .authnav__icon {
   fill: currentColor;
+
   @media screen and (max-width: 767px) {
     display: none;
   }

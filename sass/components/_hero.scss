@@ -61,19 +61,22 @@
 }
 .hero-section {
   padding: 118px 0;
+
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
   }
 }
 .hero-section__title {
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62em;
   letter-spacing: 0.06em;
   text-align: center;
-  color: getColorLight("light");
   text-transform: uppercase;
+
+  color: getColorLight("light");
 
   @media screen and (min-width: 1200px) {
     font-size: 44px;

@@ -17,11 +17,14 @@
 .filter__item {
   margin-top: 15px;
 }
+
+// alternative - instead of margin-top
 // .filter__item:nth-child(-n + 3) {
 //   @media screen and (max-width: 767px) {
 //     margin-bottom: 15px;
 //   }
 // }
+
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -51,6 +54,7 @@
 // portfolio link overlay
 .portfolio__link {
   position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -64,20 +68,25 @@
 // portfolio thumb
 .portfolio__thumb {
   position: relative;
+
   display: flex;
   overflow: hidden;
 }
 // portfolio overlay
 .portfolio__overlay {
   position: absolute;
+
   width: 100%;
   height: 100%;
   padding: 77px 24px;
+
   font-size: 18px;
   line-height: 1.56em;
   letter-spacing: 0.03em;
+
   color: getColorLight("light");
   background-color: getColorAccent("accent-overlay");
+
   transform: translateY(100%);
   @include Animation(transform);
 
@@ -95,6 +104,7 @@
 // portfolio text-wrapper
 .portfolio__text-wrapper {
   padding: 20px 24px;
+
   border-left: 1px solid getColorLight("light-border");
   border-right: 1px solid getColorLight("light-border");
   border-bottom: 1px solid getColorLight("light-border");
@@ -105,15 +115,18 @@
 }
 .portfolio__name {
   margin-bottom: 4px;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 2em;
   letter-spacing: 0.06em;
+
   color: getColorDark("secondary");
 }
 .portfolio__text {
   font-size: 16px;
   line-height: 1.87em;
   letter-spacing: 0.03em;
+
   color: getColorDark("theme");
 }

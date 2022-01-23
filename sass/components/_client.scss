@@ -4,8 +4,8 @@
   margin: -15px;
 }
 .client__item {
-  height: 92px;
   @include grid(2);
+  height: 92px;
 
   @media screen and (min-width: 768px) {
     @include grid(3);
@@ -15,12 +15,14 @@
   }
 }
 .client__thumb {
-  height: 100%;
   @include centeredFlex();
+  height: 100%;
+
   @include background;
   fill: getColorLight("icon");
   border: 1px solid getColorLight("icon");
   border-radius: 4px;
+
   @include Animation(fill, border);
 
   &:hover,
