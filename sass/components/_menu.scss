@@ -30,10 +30,12 @@
     top: 0;
     left: 0;
 
-    display: none;
+    // display: none;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
+
+    transform: translateX(100%);
 
     &.is-open {
       z-index: 1;
@@ -42,6 +44,9 @@
       flex-direction: column;
       justify-content: space-between;
       overflow-y: scroll;
+
+      transform: translateX(0);
+      @include Animation(transform);
     }
   }
   @media screen and (min-width: 768px) {

@@ -30,6 +30,8 @@
     0px 2px 1px getColorDark("maxDark-opacity20");
   border-radius: 4px;
 
+  @include Animation(transform);
+
   @media screen and (min-width: 480px) {
     position: absolute;
     top: 50%;
@@ -39,7 +41,6 @@
     width: 100%;
 
     transform: translate(-50%, -50%) scale(1);
-    @include Animation(transform);
   }
 
   @media screen and (min-width: 568px) and (orientation: landscape) and (max-width: 915px) {
@@ -49,9 +50,8 @@
   @media screen and (min-width: 1200px) {
     max-width: 528px;
   }
-}
-.modal-container--is-hidden .modal {
-  @media screen and (min-width: 480px) {
+
+  .modal-container--is-hidden & {
     transform: translate(-50%, -50%) scale(1.1);
   }
 }
