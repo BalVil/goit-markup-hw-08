@@ -768,6 +768,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
