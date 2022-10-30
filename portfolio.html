@@ -141,32 +141,54 @@
           <!-- Radio buttons -->
           <ul class="filter">
             <li class="filter__item">
-              <button class="button filter__button" type="button">Усі</button>
+              <button
+                class="button filter__button button__active"
+                type="button"
+                data-action="all"
+              >
+                Усі
+              </button>
             </li>
             <li class="filter__item">
-              <button class="button filter__button" type="button">
+              <button
+                class="button filter__button"
+                type="button"
+                data-action="web"
+              >
                 Веб-сайти
               </button>
             </li>
             <li class="filter__item">
-              <button class="button filter__button" type="button">
+              <button
+                class="button filter__button"
+                type="button"
+                data-action="app"
+              >
                 Додатки
               </button>
             </li>
             <li class="filter__item">
-              <button class="button filter__button" type="button">
+              <button
+                class="button filter__button"
+                type="button"
+                data-action="design"
+              >
                 Дизайн
               </button>
             </li>
             <li class="filter__item">
-              <button class="button filter__button" type="button">
+              <button
+                class="button filter__button"
+                type="button"
+                data-action="marketing"
+              >
                 Маркетинг
               </button>
             </li>
           </ul>
           <!-- Project-list -->
           <ul class="portfolio">
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="web">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -232,7 +254,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="design">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -300,7 +322,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="app">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -366,7 +388,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="marketing">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -432,7 +454,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="app">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -498,7 +520,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="web">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -564,7 +586,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="design">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -630,7 +652,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="marketing">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -696,7 +718,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item" data-filter="app">
               <a href="#" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <picture>
@@ -872,5 +894,6 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="./js/menu.js"></script>
+    <script defer src="./js/filter.js"></script>
   </body>
 </html>

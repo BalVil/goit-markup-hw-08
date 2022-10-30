@@ -35,3 +35,7 @@
 "C4" The layout is made with respect to three breakpoints: 480px, 768px and 1200px.
 
 "C5" The design of the mobile menu is completed.
+
+## JS (optionally)
+
+opening and closing windows by pressing the button

@@ -22,28 +22,3 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
-// filter buttons (radio button)
-.filter__button {
-  min-width: 73px;
-  padding: 6px 22px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625em;
-  letter-spacing: 0.03em;
-  text-align: center;
-
-  color: getColorDark("secondary");
-  background-color: getColorLight("light-bg");
-  box-shadow: none;
-
-  @include Animation(color);
-
-  &:hover,
-  &:focus {
-    color: getColorLight("light");
-    box-shadow: 0 3px 1px getColorDark("maxDark-opacity10"),
-      0 1px 2px getColorDark("maxDark-opacity8"),
-      0 2px 2px getColorDark("maxDark-opacity12");
-  }
-}
