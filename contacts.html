@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакти - із задоволенням відповімо на всі ваші питання</title>
+    <meta
+      name="description"
+      content="Використовуємо останні розробки в IT, пропонуємо кілька підсумкових варіантів клієнтам, вчасно надаємо всю інформацію щодо проєкту — прибутковість вашого бізнесу збільшиться більш ніж на 30% за 6 місяців співпраці з нами"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="apple-touch-icon" href="/" />
+  </head>
+  <body>
+    <!-- Page header-->
+    <header class="page-header">
+      <div class="container">
+        <!-- Main navigation to other pages -->
+        <nav class="navbar">
+          <!-- header logo  -->
+          <a href="./index.html" class="logo"
+            >Web<span class="logo__text">Studio</span></a
+          >
+          <button
+            type="button"
+            class="menu-burger js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <svg
+              class="menu-burger__icon"
+              width="40"
+              height="40"
+              aria-label="mobile menu toggle"
+            >
+              <use href="./images/sprite.svg#menu_burger"></use>
+            </svg>
+          </button>
+
+          <!-- Navigation menu -->
+          <div class="menu-container js-menu-container" id="menu-container">
+            <button
+              type="button"
+              class="menu-close js-close-menu"
+              aria-expanded="false"
+              aria-controls="menu-container"
+            >
+              <svg
+                class="menu-close__icon"
+                width="40"
+                height="40"
+                aria-label="mobile menu toggle"
+              >
+                <use href="./images/sprite.svg#close_cross"></use>
+              </svg>
+            </button>
+            <div class="navigation">
+              <ul class="navbox">
+                <li class="navbox__item">
+                  <a href="./index.html" class="navbox__link">Студія</a>
+                </li>
+                <li class="navbox__item">
+                  <a href="./portfolio.html" class="navbox__link">Портфоліо</a>
+                </li>
+                <li class="navbox__item">
+                  <a
+                    href="./contacts.html"
+                    class="navbox__link navbox__link--current"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Header links list-->
+            <div class="contacts">
+              <ul class="authnav">
+                <li class="authnav__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="authnav__link authnav__link--accent"
+                  >
+                    <svg class="authnav__icon" width="10" height="16">
+                      <use href="./images/sprite.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="authnav__item">
+                  <a href="mailto:info@devstudio.com" class="authnav__link">
+                    <svg class="authnav__icon" width="16" height="12">
+                      <use href="./images/sprite.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="social-name">
+                <li class="social-name__item">
+                  <a href="#" aria-label="instagram" class="social-name__link"
+                    >Instagram
+                  </a>
+                </li>
+                <li class="social-name__item">
+                  <a href="#" aria-label="twitter" class="social-name__link"
+                    >Twitter
+                  </a>
+                </li>
+                <li class="social-name__item">
+                  <a href="#" aria-label="facebook" class="social-name__link"
+                    >Facebook
+                  </a>
+                </li>
+                <li class="social-name__item">
+                  <a href="#" aria-label="linkedin" class="social-name__link"
+                    >LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Hero -->
+      <div class="hero-overlay__contacts">
+        <section class="section hero-section">
+          <h1 class="hero-section__title">Як ми можемо вам допомогти?</h1>
+          <form
+            class="contacts-form"
+            onsubmit="event.preventDefault();"
+            role="search"
+          >
+            <label class="contacts-form__label" for="search">Пошук</label>
+            <input
+              class="contacts-form__input"
+              id="search"
+              type="search"
+              placeholder="Пошук..."
+              autofocus
+              required
+              aria-label="Пошук..."
+            />
+            <button class="contacts-form__button" type="submit">Go</button>
+          </form>
+        </section>
+      </div>
+
+      <!-- map section -->
+      <section class="section client-section">
+        <div class="container">
+          <h2 class="map__title visually-hidden">Як до нас дістатися</h2>
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.7794508479155!2d30.536191751597958!3d50.42658067937129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1667087226860!5m2!1suk!2sua"
+              width="800"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section class="section contact-section">
+        <div class="container">
+          <h2 class="section__title">Залишилися питання?</h2>
+          <p class="contact-list__text">
+            Якщо у Вас виникнуть будь-які запитання або побажання, наші
+            співробітники завжди раді допомогти. Ви можете зв'язатися з нами
+            телефоном, факсом або електронною поштою, і ми обов'язково надамо
+            відповідь.
+          </p>
+          <p class="contact-list__text">
+            Ми відкриті:<br />
+            з 8:00 до 21:00 вечора, 7 днів на тиждень.
+          </p>
+          <p class="contact-list__text">
+            Ми закриті на офіційні державні свята.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <!-- Footer address -->
+        <div class="footer-address">
+          <a href="#" class="logo footer__logo"
+            >Web<span class="logo__text--inverse">Studio</span></a
+          >
+          <address class="address">
+            <ul>
+              <li class="address__item">м. Київ, пр-т Лесі Українки, 26</li>
+              <li class="address__item">
+                <a href="mailto:info@example.com" class="address__link"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="address__item">
+                <a href="tel:+380991111111" class="address__link"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <!-- Footer social-->
+        <div class="social-footer">
+          <h2 class="social-footer__title">приєднуйтесь</h2>
+          <ul class="social">
+            <li class="social__item">
+              <a
+                href="#"
+                aria-label="instagram"
+                class="social__link social__link--inverse"
+              >
+                <svg class="social__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="#"
+                aria-label="twitter"
+                class="social__link social__link--inverse"
+              >
+                <svg class="social__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="#"
+                aria-label="facebook"
+                class="social__link social__link--inverse"
+              >
+                <svg class="social__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="#"
+                aria-label="linkedin"
+                class="social__link social__link--inverse"
+              >
+                <svg class="social__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Footer subscribe -->
+        <form class="subscribe">
+          <label class="subscribe__field">
+            <span class="subscribe__title">підпишіться на розсилку</span>
+            <input
+              type="text"
+              name="subscribe"
+              placeholder="E-mail"
+              class="subscribe__input"
+            />
+          </label>
+          <button type="submit" class="button subscribe__button">
+            Підписатися
+            <svg
+              class="subscribe__icon subscribe__icon--right"
+              width="24"
+              height="24"
+            >
+              <use href="./images/sprite.svg#send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>
+    <!-- backdrop -->
+    <div class="modal-container modal-container--is-hidden" data-modal>
+      <div class="modal">
+        <button
+          type="button"
+          class="circle-btn modal__circle-btn"
+          data-modal-close
+        >
+          <svg class="modal__icon-close" width="11" height="11">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="form">
+          <label class="form__group"
+            >Имя
+            <span class="form__icon-box">
+              <input type="text" class="form__input form-control" name="name" />
+              <svg width="18" height="18" class="form__icon">
+                <use href="./images/sprite.svg#person"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__group"
+            >Телефон
+            <span class="form__icon-box">
+              <input
+                type="text"
+                class="form__input form-control"
+                name="phone"
+              />
+              <svg width="18" height="18" class="form__icon">
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__group"
+            >Почта
+            <span class="form__icon-box">
+              <input type="text" class="form__input form-control" name="mail" />
+              <svg width="18" height="18" class="form__icon">
+                <use href="./images/sprite.svg#email"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form__comment"
+            >Коментар
+            <textarea
+              name="comment"
+              placeholder="Введите текст"
+              class="form__textarea form-control"
+            ></textarea>
+          </label>
+          <div class="form__checkbox">
+            <label class="form__label-checkbox">
+              <input
+                type="checkbox"
+                name="checkbox"
+                class="form__input-checkbox visually-hidden"
+              />
+              <span class="form__icon-checkbox form__icon-checkbox--left">
+                <svg width="16" height="15">
+                  <use href="./images/sprite.svg#check"></use>
+                </svg>
+              </span>
+              Погоджуюся з розсилкою та приймаю&nbsp;<a
+                href="#"
+                class="form__link-checkbox"
+                >Умови договору</a
+              ></label
+            >
+          </div>
+          <button type="submit" class="button form__button">Надіслати</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      (() => {
+        document
+          .querySelector(".feedback-form")
+          ?.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/menu.js"></script>
+  </body>
+</html>

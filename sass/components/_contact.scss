@@ -1,0 +1,82 @@
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 40%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.contact-list__text {
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+}
+.contact-list__text:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.contacts-form {
+  position: relative;
+  margin: 0 auto;
+  max-width: 30rem;
+}
+.contacts-form__input,
+.contacts-form__button {
+  height: 4rem;
+  border: 0;
+  font-size: 1.8rem;
+}
+.contacts-form__input[type="search"] {
+  outline: 0;
+  width: 100%;
+  padding: 0 1.6rem;
+  border-radius: 4px;
+  appearance: none; //for iOS
+  @include Animation(width, border-radius);
+  z-index: 1;
+  position: relative;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 1.25em;
+    letter-spacing: 0.03em;
+  }
+}
+.contacts-form__button {
+  display: none; // prevent being able to tab to it
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  font-weight: bold;
+  background: #c4e2ff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contacts-form__input:not(:placeholder-shown) {
+  width: calc(100% - 6rem);
+
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 1.25em;
+  letter-spacing: 0.03em;
+  + button {
+    display: block;
+  }
+}
+.contacts-form__label {
+  position: absolute;
+  clip-path: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
