@@ -1575,7 +1575,7 @@ body {
   color: #ffffff;
 }
 
-.button__active {
+.button--active {
   background-color: #188ce8;
   -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
@@ -1615,7 +1615,7 @@ body {
   }
 }
 
-.portfolio__item--is-hidden {
+.item--is-hidden {
   display: none;
 }
 

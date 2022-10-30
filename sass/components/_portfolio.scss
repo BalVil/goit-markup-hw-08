@@ -52,7 +52,7 @@
   }
 }
 
-.button__active {
+.button--active {
   background-color: getColorAccent("accent-button");
   box-shadow: 0 3px 1px getColorDark("maxDark-opacity10"),
     0 1px 2px getColorDark("maxDark-opacity8"),
@@ -82,7 +82,7 @@
   }
 }
 
-.portfolio__item--is-hidden {
+.item--is-hidden {
   display: none;
 }
 

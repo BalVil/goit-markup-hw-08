@@ -1,22 +1,25 @@
-const filterBtn = document.querySelectorAll(".filter__button");
-const portfolioItems = document.querySelectorAll(".portfolio__item");
+const filterButtons = document.querySelectorAll(".filter__button");
 
-filterBtn.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+for (let button of filterButtons) {
+  button.addEventListener("click", (e) => {
     // змінюємо активний клас на кнопках фільтра
-    filterBtn.forEach((f) => f.classList.remove("button__active"));
-    e.target.classList.toggle("button__active");
+    const active = document.querySelector(".button--active");
+    if (active) {
+      active.classList.remove("button--active");
+    }
+    e.target.classList.toggle("button--active");
 
-    //   прибераємо невибрані елементи
-    portfolioItems.forEach((item) => {
+    //   показуємо тільки вибрані елементи
+    let portfolioItems = document.querySelectorAll(".portfolio__item");
+    for (let item of portfolioItems) {
       if (
-        item.dataset.filter !== btn.dataset.action &&
-        btn.dataset.action !== "all"
+        item.dataset.id !== button.dataset.id &&
+        button.dataset.id !== "all"
       ) {
-        item.classList.add("portfolio__item--is-hidden");
+        item.classList.add("item--is-hidden");
       } else {
-        item.classList.remove("portfolio__item--is-hidden");
+        item.classList.remove("item--is-hidden");
       }
-    });
+    }
   });
-});
+}
