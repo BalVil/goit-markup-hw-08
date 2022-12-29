@@ -26,11 +26,14 @@
   background-color: getColorLight("light");
 
   @media screen and (max-width: 767px) {
+    z-index: 99;
     position: absolute;
     top: 0;
     left: 0;
 
-    // display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
@@ -39,8 +42,6 @@
     @include Animation(transform);
 
     &.is-open {
-      z-index: 1;
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -51,6 +52,7 @@
     }
   }
   @media screen and (min-width: 768px) {
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     flex-grow: 1;

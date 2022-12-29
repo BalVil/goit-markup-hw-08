@@ -25,6 +25,7 @@
   position: relative;
   margin: 0 auto;
   max-width: 30rem;
+  padding: 0 1rem;
 }
 .contacts-form__input,
 .contacts-form__button {
@@ -39,7 +40,6 @@
   border-radius: 4px;
   appearance: none; //for iOS
   @include Animation(width, border-radius);
-  z-index: 1;
   position: relative;
 
   &::placeholder {

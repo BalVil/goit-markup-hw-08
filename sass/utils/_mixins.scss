@@ -18,7 +18,7 @@
 }
 
 @mixin Animation($properties...) {
-  transition: 250ms $timing-function;
+  transition: 300ms $timing-function;
 }
 // hover, focus on links (header, social)
 
