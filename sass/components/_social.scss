@@ -31,6 +31,7 @@
 .social-name {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 12px;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -45,19 +46,26 @@
     width: 1px;
     margin-left: 10px;
     margin-right: 10px;
-
     vertical-align: top;
-
     border-right: 2px solid getColorDark("avgDark-opacity20");
+
+    @media screen and (max-width: 399px) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
   }
 }
+
 .social-name__link {
   font-size: 18px;
   line-height: 1.22em;
-
   color: getColorAccent("accent-primary");
+
+  @media screen and (max-width: 399px) {
+    font-size: 16px;
+  }
 }
-// footer social link
+
 .social__link--inverse {
   background-color: getColorLight("light-opacity10");
   fill: getColorLight("light");

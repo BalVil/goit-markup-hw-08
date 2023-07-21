@@ -1,5 +1,5 @@
-export function toggleModal(targetElement) {
-  const modal = document.querySelector(targetElement);
+(() => {
+  const modal = document.querySelector(".modal-container--is-hidden");
   const openModalBtn = document.querySelector("[data-modal-open]");
   const closeModalBtn = document.querySelector("[data-modal-close]");
 
@@ -13,4 +13,4 @@ export function toggleModal(targetElement) {
   function closeModal() {
     modal.classList.add("modal-container--is-hidden");
   }
-}
+})();

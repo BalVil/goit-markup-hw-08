@@ -36,7 +36,7 @@
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    padding: 48px 40px;
+    padding: 48px 32px 40px 40px;
 
     transform: translateY(-100%);
     @include Animation(transform);
@@ -51,6 +51,12 @@
       @include Animation(transform);
     }
   }
+
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    height: auto;
+    font-size: 28px;
+  }
+
   @media screen and (min-width: 768px) {
     z-index: 2;
     display: flex;
@@ -81,7 +87,7 @@
   cursor: pointer;
 
   // for iphone 6-8 landscape
-  @media screen and (min-width: 640px) and (max-width: 736px) {
+  @media screen and (min-width: 640px) and (max-width: 767px) {
     right: calc(100vw - 80.5%);
   }
 
@@ -119,7 +125,12 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
   }
+
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    margin-bottom: 16px;
+  }
 }
+
 .navbox__link {
   color: getColorDark("secondary");
 
@@ -157,17 +168,19 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 64px;
   }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    margin-bottom: 40px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
     flex-direction: row-reverse;
   }
 }
 .authnav__item:last-child {
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 10px;
   }
   @media screen and (min-width: 1200px) {
@@ -200,15 +213,8 @@
   }
 }
 .authnav__link--accent {
-  @media screen and (max-width: 380px) {
-    font-size: 26px;
-
-    color: getColorAccent("accent-primary");
-  }
-  @media screen and (min-width: 381px) and (max-width: 767px) {
-    font-size: 34px;
-    line-height: 1.18em;
-
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
     color: getColorAccent("accent-primary");
   }
 }

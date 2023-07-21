@@ -333,6 +333,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  row-gap: 12px;
 }
 @media screen and (min-width: 768px) {
   .social-name {
@@ -354,11 +355,22 @@ body {
   vertical-align: top;
   border-right: 2px solid rgba(33, 33, 33, 0.2);
 }
+@media screen and (max-width: 399px) {
+  .social-name__item:not(:last-child)::after {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
 .social-name__link {
   font-size: 18px;
   line-height: 1.22em;
   color: #2196f3;
+}
+@media screen and (max-width: 399px) {
+  .social-name__link {
+    font-size: 16px;
+  }
 }
 
 .social__link--inverse {
@@ -375,7 +387,7 @@ body {
   height: 100%;
   padding: 94px 15px;
   overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
   visibility: visible;
   -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -392,8 +404,8 @@ body {
   position: relative;
   padding: 40px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -411,7 +423,7 @@ body {
 }
 @media screen and (min-width: 568px) and (orientation: landscape) and (max-width: 915px) {
   .modal {
-    top: 100%;
+    top: 90%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -778,7 +790,7 @@ body {
             justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    padding: 48px 40px;
+    padding: 48px 32px 40px 40px;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
     -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -800,6 +812,12 @@ body {
             transform: translateY(0);
     -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .menu-container {
+    height: auto;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -839,7 +857,7 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-@media screen and (min-width: 640px) and (max-width: 736px) {
+@media screen and (min-width: 640px) and (max-width: 767px) {
   .menu-close {
     right: calc(100vw - 80.5%);
   }
@@ -890,6 +908,12 @@ body {
     margin-bottom: 32px;
   }
 }
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .navbox__item:not(:last-child),
+  .authnav__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
 
 .navbox__link {
   color: #212121;
@@ -927,6 +951,11 @@ body {
     margin-bottom: 64px;
   }
 }
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .authnav {
+    margin-bottom: 40px;
+  }
+}
 @media screen and (min-width: 768px) {
   .authnav {
     display: -webkit-box;
@@ -940,9 +969,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .authnav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -950,7 +976,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .authnav__item:last-child {
     margin-bottom: 10px;
   }
@@ -991,16 +1017,9 @@ body {
   color: #2196f3;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 767px) {
   .authnav__link--accent {
-    font-size: 26px;
-    color: #2196f3;
-  }
-}
-@media screen and (min-width: 381px) and (max-width: 767px) {
-  .authnav__link--accent {
-    font-size: 34px;
-    line-height: 1.18em;
+    font-size: 28px;
     color: #2196f3;
   }
 }
@@ -1241,8 +1260,8 @@ body {
 
 .team__item {
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.3);
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (min-width: 768px) {
