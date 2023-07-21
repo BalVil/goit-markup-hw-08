@@ -26,7 +26,7 @@
   background-color: getColorLight("light");
 
   @media screen and (max-width: 767px) {
-    z-index: 99;
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +52,7 @@
     }
   }
   @media screen and (min-width: 768px) {
-    z-index: 99;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     flex-grow: 1;

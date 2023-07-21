@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="apple-touch-icon" href="/" />
   </head>
-  <body>
+  <body class="no-transition" id="body">
     <!-- Page header-->
     <header class="page-header">
       <div class="container">
@@ -823,11 +823,16 @@
           </svg>
         </button>
         <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="form">
+        <form id="feedback-form">
           <label class="form__group"
-            >ім'я
+            >Ім'я
             <span class="form__icon-box">
-              <input type="text" class="form__input form-control" name="name" />
+              <input
+                type="text"
+                class="form__input form-control"
+                name="name"
+                required
+              />
               <svg width="18" height="18" class="form__icon">
                 <use href="./images/sprite.svg#person"></use>
               </svg>
@@ -840,6 +845,7 @@
                 type="text"
                 class="form__input form-control"
                 name="phone"
+                required
               />
               <svg width="18" height="18" class="form__icon">
                 <use href="./images/sprite.svg#phone"></use>
@@ -859,8 +865,9 @@
             >Коментар
             <textarea
               name="comment"
-              placeholder="Введите текст"
+              placeholder="Уведіть текст"
               class="form__textarea form-control"
+              required
             ></textarea>
           </label>
           <div class="form__checkbox">
@@ -869,6 +876,7 @@
                 type="checkbox"
                 name="checkbox"
                 class="form__input-checkbox visually-hidden"
+                required
               />
               <span class="form__icon-checkbox form__icon-checkbox--left">
                 <svg width="16" height="15">
@@ -886,26 +894,24 @@
         </form>
       </div>
     </div>
-    <script>
-      (() => {
-        document
-          .querySelector(".feedback-form")
-          ?.addEventListener("submit", (e) => {
-            e.preventDefault();
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-          });
-      })();
-    </script>
+    <div class="thanks-message" style="display: none">
+      <p>Thanks for your submission!</p>
+    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script defer src="./js/menu.js"></script>
-    <script src="./js/modal.js"></script>
+    <script src="./js/pageTransition.js"></script>
+    <script src="./js/menuToggle.js"></script>
+    <script type="module">
+      import { toggleModal } from "./js/toggleModal.js";
+      toggleModal(".modal-container--is-hidden");
+    </script>
+
+    <script type="module" src="./js/feedbackForm.js"></script>
   </body>
 </html>
