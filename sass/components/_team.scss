@@ -9,6 +9,7 @@
   }
 }
 .team__item {
+  container-type: inline-size;
   background-color: getColorLight("light");
   box-shadow: 0px 1px 3px getColorDark("maxDark-opacity12"),
     0px 1px 1px getColorDark("maxDark-opacity14"),
@@ -46,7 +47,12 @@
   text-align: center;
 
   color: getColorDark("secondary");
+
+  @container (width >= 400px) {
+    font-size: 18px;
+  }
 }
+
 .team__content {
   margin-bottom: 16px;
 
