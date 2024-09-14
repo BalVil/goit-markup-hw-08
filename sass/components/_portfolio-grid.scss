@@ -21,13 +21,6 @@
   margin-top: 15px;
 }
 
-// alternative - instead of margin-top
-// .filter__item:nth-child(-n + 3) {
-//   @media screen and (max-width: 767px) {
-//     margin-bottom: 15px;
-//   }
-// }
-
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -63,28 +56,24 @@
 }
 
 .portfolio {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+  --grid-layout-gap: 2em;
+  --grid-column-count: 3;
+  --grid-item-min-width: 20em;
+
+  /** * Calculated values. */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+
+
 }
 
 .portfolio__item {
-  @media screen and (min-width: 768px) {
-    @include grid(2);
-    display: flex;
-  }
-
-  @media screen and (min-width: 1200px) {
-    @include grid(3);
-  }
-
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-  }
+  display: flex;
 }
 
 .item--is-hidden {
